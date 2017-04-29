@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',['as' => 'home', 'uses' => 'HomeController@index']);
+Route::get('/gallery',['as' => 'gallery', 'uses' => 'HomeController@gallery']);
+Route::get('/blog',['as' => 'blog', 'uses' => 'BlogController@index']);
+Route::get('/contact',['as' => 'contact', 'uses' => 'HomeController@contact']);
