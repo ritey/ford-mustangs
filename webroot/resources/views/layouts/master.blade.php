@@ -133,7 +133,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6">
-						&copy; {{ date('Y') }} <a target="_blank" href="http://www.ford-mustangs.co.uk/" title="Ford Mustangs">Ford Mustangs</a>. All Rights Reserved.
+						&copy; {{ date('Y') }} <a target="_blank" href="http://www.ford-mustangs.co.uk/" title="Ford Mustangs">Ford Mustangs</a>. All Rights Reserved. Site maintained by <a href="https://www.coderstudios.com" target="_blank">Coder Studios</a>
 					</div>
 					<div class="col-sm-6">
 						<ul class="pull-right">
