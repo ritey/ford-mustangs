@@ -26,7 +26,7 @@ homepage
 							<div class="carousel-content">
 								<h1 class="animation animated-item-1">Ford Mustangs</h1>
 								<h2 class="animation animated-item-2">Ford Mustang GT500</h2>
-								<a class="btn-slide animation animated-item-3" href="#">Read More</a>
+								<!-- <a class="btn-slide animation animated-item-3" href="#">Read More</a> -->
 							</div>
 						</div>
 
@@ -40,8 +40,8 @@ homepage
 						<div class="col-sm-6">
 							<div class="carousel-content">
 								<h1 class="animation animated-item-1">Ford Mustangs</h1>
-								<h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-								<a class="btn-slide animation animated-item-3" href="#">Read More</a>
+								<h2 class="animation animated-item-2">New Ford Mustang </h2>
+								<!-- <a class="btn-slide animation animated-item-3" href="#">Read More</a> -->
 							</div>
 						</div>
 
@@ -55,8 +55,8 @@ homepage
 						<div class="col-sm-6">
 							<div class="carousel-content">
 								<h1 class="animation animated-item-1">Ford Mustangs</h1>
-								<h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-								<a class="btn-slide animation animated-item-3" href="#">Read More</a>
+								<h2 class="animation animated-item-2">The new Ford Mustang Shelby GT350<sup>&reg;</sup></h2>
+								<!-- <a class="btn-slide animation animated-item-3" href="#">Read More</a> -->
 							</div>
 						</div>
 

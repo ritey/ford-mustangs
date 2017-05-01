@@ -1,0 +1,36 @@
+version: '2'
+
+services:
+
+  web:
+    container_name: ford_web
+    build:
+      context: ./docker
+      dockerfile: web.docker
+    volumes:
+      - ./:/var/www
+    ports:
+      - "8086:80"
+    links:
+      - app
+
+  app:
+    container_name: ford_app
+    build:
+      context: ./docker
+      dockerfile: app.docker
+    volumes:
+      - ./:/var/www
+    links:
+      - database
+    environment:
+      - "DB_PORT=3306"
+      - "DB_HOST=database"
+
+  database:
+    container_name: ford_db
+    image: mysql:5.7
+    env_file:
+      - ./docker.env
+    ports:
+      - "33064:3306"

@@ -63,10 +63,10 @@
 					<div class="collapse navbar-collapse navbar-right">
 						<ul class="nav navbar-nav">
 							<li class="{{ $request->route()->uri == '/' ? 'active' : '' }}"><a href="{{ route('home') }}">Ford Mustangs</a></li>
-							<li class="{{ $request->route()->uri == 'gallery' ? 'active' : '' }}"><a href="{{ route('gallery') }}">Gallery</a></li>
+							<!--<li class="{{ $request->route()->uri == 'gallery' ? 'active' : '' }}"><a href="{{ route('gallery') }}">Gallery</a></li>
 							<li class="{{ $request->route()->uri == 'for-sale' ? 'active' : '' }}"><a href="#">For Sale</a></li>
 							<li class="{{ $request->route()->uri == 'articles' ? 'active' : '' }}"><a href="#">Articles</a></li>
-							<!-- <li class="dropdown">
+							--><!-- <li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu">
 									<li><a href="blog-item.html">Blog Single</a></li>
@@ -75,7 +75,7 @@
 									<li><a href="shortcodes.html">Shortcodes</a></li>
 								</ul>
 							</li> -->
-							<li class="{{ $request->route()->uri == 'blog' ? 'active' : '' }}"><a href="{{ route('blog') }}">Blog</a></li>
+							<!-- <li class="{{ $request->route()->uri == 'blog' ? 'active' : '' }}"><a href="{{ route('blog') }}">Blog</a></li> -->
 							<li class="{{ $request->route()->uri == 'contact' ? 'active' : '' }}"><a href="{{ route('contact') }}">Contact</a></li>
 						</ul>
 					</div>
@@ -102,12 +102,12 @@
 
 					<div class="col-md-3 col-sm-6">
 						<div class="widget">
-							<h3>Site Support</h3>
+							<!-- <h3>Site Support</h3>
 							<ul>
 								<li><a href="#">Site Faqs</a></li>
 								<li><a href="#">Blog</a></li>
 								<li><a href="#">Forum</a></li>
-							</ul>
+							</ul> -->
 						</div>
 					</div><!--/.col-md-3-->
 
@@ -115,13 +115,11 @@
 						<div class="widget">
 							<h3>Pages</h3>
 							<ul>
-								<li><a href="#">Web Development</a></li>
-								<li><a href="#">SEO Marketing</a></li>
-								<li><a href="#">Theme</a></li>
-								<li><a href="#">Development</a></li>
-								<li><a href="#">Email Marketing</a></li>
-								<li><a href="#">Plugin Development</a></li>
-								<li><a href="#">Article Writing</a></li>
+								<!-- <li><a href="{{ route('gallery') }}">Gallery</a></li>
+								<li><a href="{{ route('gallery') }}">For Sale</a></li>
+								<li><a href="{{ route('gallery') }}">Articles</a></li>
+								<li><a href="{{ route('blog') }}">Blog</a></li> -->
+								<li><a href="{{ route('contact') }}">Contact</a></li>
 							</ul>
 						</div>
 					</div><!--/.col-md-3-->
@@ -138,10 +136,10 @@
 					</div>
 					<div class="col-sm-6">
 						<ul class="pull-right">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">About Us</a></li>
-							<li><a href="#">Faq</a></li>
-							<li><a href="#">Contact Us</a></li>
+							<li><a href="{{ route('home') }}">Home</a></li>
+							<!--<li><a href="#">About Us</a></li>
+							<li><a href="#">Faq</a></li> -->
+							<li><a href="{{ route('contact') }}">Contact Us</a></li>
 						</ul>
 					</div>
 				</div>
