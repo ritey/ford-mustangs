@@ -12,9 +12,14 @@ const { mix } = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
-	.sass('resources/assets/sass/app.scss', 'public/css')
-	.combine([
-		'public/css/app.css',
+	.sass('resources/assets/sass/app.scss', 'public/css');
+mix.combine([
 		'resources/assets/css/main.css',
 		'resources/assets/css/responsive.css'
-	], 'public/css/app.css');
+	], 'public/css/build.css')
+	.version();
+mix.combine([
+		'node_modules/masonry-layout/dist/masonry.pkgd.min.js',
+		'node_modules/isotope-layout/dist/isotope.pkgd.min.js',
+	], 'public/js/libraries.js')
+	.version();

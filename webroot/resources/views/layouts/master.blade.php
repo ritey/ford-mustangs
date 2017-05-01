@@ -8,6 +8,7 @@
 		@yield('metas')
 
 		<link rel="stylesheet" href="{{ mix('/css/app.css') }}" type="text/css">
+		<link rel="stylesheet" href="{{ mix('/css/build.css') }}" type="text/css">
 		<link rel="apple-touch-icon" sizes="57x57" href="/images/icon/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="/images/icon/apple-icon-60x60.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="/images/icon/apple-icon-72x72.png">
@@ -62,10 +63,10 @@
 
 					<div class="collapse navbar-collapse navbar-right">
 						<ul class="nav navbar-nav">
-							<li class="{{ $request->route()->uri == '/' ? 'active' : '' }}"><a href="{{ route('home') }}">Ford Mustangs</a></li>
-							<!--<li class="{{ $request->route()->uri == 'gallery' ? 'active' : '' }}"><a href="{{ route('gallery') }}">Gallery</a></li>
-							<li class="{{ $request->route()->uri == 'for-sale' ? 'active' : '' }}"><a href="#">For Sale</a></li>
-							<li class="{{ $request->route()->uri == 'articles' ? 'active' : '' }}"><a href="#">Articles</a></li>
+							<li class="{{ isset($request->route()->uri) && $request->route()->uri == '/'  ? 'active' : '' }}"><a href="{{ route('home') }}">Ford Mustangs</a></li>
+							<li class="{{ isset($request->route()->uri) && strpos(' ' . $request->route()->uri,'mustang-gallery') ? 'active' : '' }}"><a href="{{ route('gallery') }}">Gallery</a></li>
+							<!--<li class="{{ isset($request->route()->uri) && $request->route()->uri == 'for-sale' ? 'active' : '' }}"><a href="#">For Sale</a></li>
+							<li class="{{ isset($request->route()->uri) && $request->route()->uri == 'articles' ? 'active' : '' }}"><a href="#">Articles</a></li>
 							--><!-- <li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu">
@@ -75,8 +76,8 @@
 									<li><a href="shortcodes.html">Shortcodes</a></li>
 								</ul>
 							</li> -->
-							<!-- <li class="{{ $request->route()->uri == 'blog' ? 'active' : '' }}"><a href="{{ route('blog') }}">Blog</a></li> -->
-							<li class="{{ $request->route()->uri == 'contact' ? 'active' : '' }}"><a href="{{ route('contact') }}">Contact</a></li>
+							<!-- <li class="{{ isset($request->route()->uri) && $request->route()->uri == 'blog' ? 'active' : '' }}"><a href="{{ route('blog') }}">Blog</a></li> -->
+							<li class="{{ isset($request->route()->uri) && $request->route()->uri == 'contact' ? 'active' : '' }}"><a href="{{ route('contact') }}">Contact</a></li>
 						</ul>
 					</div>
 				</div><!--/.container-->
@@ -115,8 +116,8 @@
 						<div class="widget">
 							<h3>Pages</h3>
 							<ul>
-								<!-- <li><a href="{{ route('gallery') }}">Gallery</a></li>
-								<li><a href="{{ route('gallery') }}">For Sale</a></li>
+								<li><a href="{{ route('gallery') }}">Gallery</a></li>
+								<!-- <li><a href="{{ route('gallery') }}">For Sale</a></li>
 								<li><a href="{{ route('gallery') }}">Articles</a></li>
 								<li><a href="{{ route('blog') }}">Blog</a></li> -->
 								<li><a href="{{ route('contact') }}">Contact</a></li>
@@ -147,6 +148,7 @@
 		</footer><!--/#footer-->
 
 		<script type="text/javascript" src="{{ mix('/js/app.js') }}"></script>
+		<script type="text/javascript" src="{{ mix('/js/libraries.js') }}"></script>
 
 		@yield('footer')
 

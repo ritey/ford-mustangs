@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use File;
 use Mail;
 use Illuminate\Http\Request;
 use CoderStudios\Requests\ContactRequest;
@@ -56,7 +57,42 @@ class HomeController extends BaseController
         if (env('CACHE_ENABLED',0) && $this->cache->has($key)) {
             $view = $this->cache->get($key);
         } else {
+            $gt350 = [];
+            $gt350_files = File::allFiles(public_path() . '/images/gt350');
+            foreach($gt350_files as $item) {
+                $gt350[] = ['file' => '/images/gt350/'.$item->getFilename(), 'tag' => 'GT350'];
+            }
+            $gt500_files = File::allFiles(public_path() . '/images/gt500');
+            foreach($gt500_files as $item) {
+                $gt500[] = ['file' => '/images/gt500/'.$item->getFilename(), 'tag' => 'GT500 1967'];
+            }
+            $vars = [
+                'tags' => [
+                    'GT350',
+                    'GT500',
+                    '1967',
+                ],
+                'pics' => [
+                    'GT350' => $gt350,
+                    'GT500' => $gt500,
+                ],
+            ];
             $view = view('pages.gallery',compact('vars'))->render();
+            $this->cache->add($key, $view, env('APP_CACHE_MINUTES',60));
+        }
+        return $view;
+    }
+
+    public function galleryItem($file = '')
+    {
+        $key = $this->getKeyName(__function__ . md5($file));
+        if (env('CACHE_ENABLED',0) && $this->cache->has($key)) {
+            $view = $this->cache->get($key);
+        } else {
+            $vars = [
+                'img' => urldecode(str_replace('|','/',$file)),
+            ];
+            $view = view('pages.gallery-item',compact('vars'))->render();
             $this->cache->add($key, $view, env('APP_CACHE_MINUTES',60));
         }
         return $view;
