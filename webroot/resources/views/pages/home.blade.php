@@ -56,7 +56,7 @@ homepage
 							<div class="carousel-content">
 								<h1 class="animation animated-item-1">Ford Mustangs</h1>
 								<h2 class="animation animated-item-2">The new Ford Mustang Shelby GT350<sup>&reg;</sup></h2>
-								<!-- <a class="btn-slide animation animated-item-3" href="#">Read More</a> -->
+								<a class="btn-slide animation animated-item-3" href="https://www.facebook.com/pg/fordmustangsuk/photos/?tab=album&album_id=300082700425976" target="_blank">View More Pics on Facebook</a>
 							</div>
 						</div>
 

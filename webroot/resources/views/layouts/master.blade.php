@@ -93,9 +93,9 @@
 						<div class="widget">
 							<h3>Social</h3>
 							<ul>
-								<li>Instagram: <a href="https://instagram.com/FordMustangsUK">@FordMustangsUK</a></li>
-								<li>Twitter: <a href="https://twitter.com/FordMustangsUK">@FordMustangsUK</a></li>
-								<li>Facebook: <a href="https://www.facebook.com/Fordmustangsuk">Ford mustangs</a></li>
+								<li>Instagram: <a href="https://instagram.com/FordMustangs_UK" target="_blank" title="View the Ford Mustangs UK Instagram pics">@FordMustangs_UK</a></li>
+								<li>Twitter: <a href="https://twitter.com/FordMustangsUK" target="_blank" title="View the Ford Mustangs UK tweets">@FordMustangsUK</a></li>
+								<li>Facebook: <a href="https://www.facebook.com/Fordmustangsuk" target="_blank" title="View the Ford Mustangs UK Facebook page">Ford mustangs</a></li>
 							</ul>
 						</div>
 					</div><!--/.col-md-3-->
