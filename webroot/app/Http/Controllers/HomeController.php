@@ -176,7 +176,7 @@ class HomeController extends BaseController
             return redirect()->route('article.index');
         }
 
-        $key = $this->getKeyName(__function__);
+        $key = $this->getKeyName(__function__ . md5($slug));
         if (env('CACHE_ENABLED',0) && $this->cache->has($key)) {
             $view = $this->cache->get($key);
         } else {
