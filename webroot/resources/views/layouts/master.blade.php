@@ -66,7 +66,7 @@
 							<li class="{{ isset($request->route()->uri) && $request->route()->uri == '/'  ? 'active' : '' }}"><a href="{{ route('home') }}">Ford Mustangs</a></li>
 							<li class="{{ isset($request->route()->uri) && strpos(' ' . $request->route()->uri,'mustang-gallery') ? 'active' : '' }}"><a href="{{ route('gallery') }}">Gallery</a></li>
 							<!--<li class="{{ isset($request->route()->uri) && $request->route()->uri == 'for-sale' ? 'active' : '' }}"><a href="#">For Sale</a></li>
-							<li class="{{ isset($request->route()->uri) && $request->route()->uri == 'articles' ? 'active' : '' }}"><a href="#">Articles</a></li>
+							--><li class="{{ isset($request->route()->uri) && $request->route()->uri == 'articles' ? 'active' : '' }}"><a href="{{ route('article.index') }}">Articles</a></li><!--
 							--><!-- <li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu">
@@ -117,8 +117,8 @@
 							<h3>Pages</h3>
 							<ul>
 								<li><a href="{{ route('gallery') }}">Gallery</a></li>
+								<li><a href="{{ route('article.index') }}">Articles</a></li>
 								<!-- <li><a href="{{ route('gallery') }}">For Sale</a></li>
-								<li><a href="{{ route('gallery') }}">Articles</a></li>
 								<li><a href="{{ route('blog') }}">Blog</a></li> -->
 								<li><a href="{{ route('contact') }}">Contact</a></li>
 							</ul>
