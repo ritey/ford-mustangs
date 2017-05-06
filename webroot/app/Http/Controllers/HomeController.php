@@ -179,9 +179,14 @@ class HomeController extends BaseController
             'id'            => 3,
             'title'         => '2013 Mustang Boss 302',
             'page_title'    => '2013 Ford Mustang Boss 302',
-            'meta_description' => '',
-            'description'   => '',
-            'intro'         => '',
+            'meta_description' => 'The 2013 Ford Mustang Boss 302 given the economoy probably shouldn\'t of been produced, but it was and it\'s brilliant.',
+            'description'   => '<p>The 2013 Ford Mustang Boss 302 with 444bhp doesn\'t overwhelm the chassis instead it feels right at home and gives you confidence and a sense of occassion. Thanks to the tweaked cyclinder head, 
+            altered ports, camshafts and bigger intake values the engine revs very quickly.</p><p>The Ford Mustang Boss 302 is a real BMW M3 contender only being 0.1 seconds slower to 60mph and 0.4 seconds slower over a quarter-mile.
+            That said with all the power and live rear axel, pulling away with good traction does take a bit of pracice, you could find yourself tramping and going through a fair few tyres if you only believe in foot down and dropping the clutch.</p>
+            <p>The interior, like other Mustangs though doesn\'t hold up against an M3 sadly. Plastics are still basic and even with the suede styled steering wheel and alloy accents the fact that you can\'t adjust the steering column and the pedals, unless you have huge feet, are too far apart.</p>
+            <p>Overall, despite the lacking interior, with the upgraded engine, suspension and great progressive driving experience Ford have actually managed to make a modern day improvement on a classic which is unusual. The 2013 Ford Mustang Boss 302 lives up to the badge and with it\'s limited run 
+            numbers is bound to be a great addition to any collection of American muscle.</p>',
+            'intro'         => 'The 2013 Ford Mustang Boss 302 sits nicely between the Mustang GT and the Shelby GT500 in terms of power sitting with 444bhp against 412bhp in the GT and 550bhp in the Shelby Mustang.',
             'date'          => '05 MAY',
             'author'        => 'David Wright',
             'img'           => '/images/articles/2012-ford-mustang-boss-302-laguna-seca-photo-387581-s-986x603.jpg',
