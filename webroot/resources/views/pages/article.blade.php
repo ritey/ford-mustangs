@@ -48,6 +48,12 @@ homepage
 
                 <aside class="col-md-4">
 
+                    <div class="widget categories">
+                        <div class="row">
+                            @include('partials.ads')
+                        </div>
+                    </div>
+
                 </aside>     
 
             </div><!--/.row-->

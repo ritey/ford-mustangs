@@ -18,6 +18,10 @@ Ford Mustangs Gallery
                 <p class="lead">Welcome to our collection of Ford Mustang pictures. If you'd like your picture to be displayed please send it to dave@coderstudios.com</p>
             </div>
 
+            <div class="center">
+                @include('partials.ads')
+            </div>
+
             <ul class="portfolio-filter text-center">
                 <li><a class="btn btn-default active" href="#" data-filter="*">All</a></li>
                 @foreach($vars['tags'] as $item)
@@ -47,6 +51,11 @@ Ford Mustangs Gallery
 
                 </div>
             </div>
+
+            <div class="center">
+                @include('partials.ads')
+            </div>
+
         </div>
     </section>
 @endsection
