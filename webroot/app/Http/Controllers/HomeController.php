@@ -57,7 +57,7 @@ class HomeController extends BaseController
         if (env('CACHE_ENABLED',0) && $this->cache->has($key)) {
             $view = $this->cache->get($key);
         } else {
-            $gt350 = [];
+            $gt350 = $gt500 = $new = [];
             $gt350_files = File::allFiles(public_path() . '/images/gt350');
             foreach($gt350_files as $item) {
                 $gt350[] = ['file' => '/images/gt350/'.$item->getFilename(), 'tag' => 'GT350'];
@@ -66,15 +66,21 @@ class HomeController extends BaseController
             foreach($gt500_files as $item) {
                 $gt500[] = ['file' => '/images/gt500/'.$item->getFilename(), 'tag' => 'GT500 1967'];
             }
+            $new_files = File::allFiles(public_path() . '/images/2017');
+            foreach($new_files as $item) {
+                $new[] = ['file' => '/images/2017/'.$item->getFilename(), 'tag' => '2017'];
+            }
             $vars = [
                 'tags' => [
                     'GT350',
                     'GT500',
                     '1967',
+                    '2017'
                 ],
                 'pics' => [
                     'GT350' => $gt350,
                     'GT500' => $gt500,
+                    '2017'  => $new,
                 ],
             ];
             $view = view('pages.gallery',compact('vars'))->render();
