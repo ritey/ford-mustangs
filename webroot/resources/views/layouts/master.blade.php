@@ -44,6 +44,14 @@
 				'csrfToken' => csrf_token(),
 			]); ?>
 		</script>
+
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({
+			google_ad_client: "ca-pub-8306229047580482",
+			enable_page_level_ads: true
+		});
+		</script>
 	</head>
 	<body class="@yield('body_class','')">
 		<div id="app"></div>
