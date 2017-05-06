@@ -4,6 +4,11 @@
 Ford Mustangs Gallery
 @endsection
 
+@section('metas')
+<meta name="description" value="Ford Mustang Gallery">
+@endsection
+
+
 @section('content')
 
     <section id="portfolio">

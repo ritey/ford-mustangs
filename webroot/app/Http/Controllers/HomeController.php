@@ -57,7 +57,7 @@ class HomeController extends BaseController
         if (env('CACHE_ENABLED',0) && $this->cache->has($key)) {
             $view = $this->cache->get($key);
         } else {
-            $gt350 = $gt500 = $new = [];
+            $gt350 = $gt500 = $twenty_fifteen = $new = [];
             $gt350_files = File::allFiles(public_path() . '/images/gt350');
             foreach($gt350_files as $item) {
                 $gt350[] = ['file' => '/images/gt350/'.$item->getFilename(), 'tag' => 'GT350'];
@@ -70,17 +70,23 @@ class HomeController extends BaseController
             foreach($new_files as $item) {
                 $new[] = ['file' => '/images/2017/'.$item->getFilename(), 'tag' => '2017'];
             }
+            $twenty_fifteen_files = File::allFiles(public_path() . '/images/2015');
+            foreach($twenty_fifteen_files as $item) {
+                $twenty_fifteen[] = ['file' => '/images/2015/'.$item->getFilename(), 'tag' => '2015'];
+            }
             $vars = [
                 'tags' => [
                     'GT350',
                     'GT500',
                     '1967',
-                    '2017'
+                    '2017',
+                    '2015',
                 ],
                 'pics' => [
                     'GT350' => $gt350,
                     'GT500' => $gt500,
                     '2017'  => $new,
+                    '2015'  => $twenty_fifteen,
                 ],
             ];
             $view = view('pages.gallery',compact('vars'))->render();
@@ -125,6 +131,8 @@ class HomeController extends BaseController
         $v8 = [
             'id'            => 2,
             'title'         => '5.0-litre V8',
+            'page_title'    => 'Ford Mustang 5.0-litre V8 engine article',
+            'meta_description' => 'The Ford Mustang 2015 5.0-litre V8 has been tickled to give better performance.',
             'description'   => '<p>The 2015 Ford Mustang V8 has been improved from lessons learnt developing the 
             special edition <a href="'.route('article',['slug' => '2013-mustang-boss-302']).'">2013 Ford Mustang Boss 302</a>.</p>
             <p>The alterations include:</p>
@@ -144,7 +152,21 @@ class HomeController extends BaseController
         $ecoboost = [
             'id'            => 1,
             'title'         => '2.3-litre EcoBoost',
-            'description'   => '',
+            'page_title'    => 'Ford Mustang 2.3-litre EcoBoost engine article',
+            'meta_description' => 'The 2015 Ford Mustang will be the first to feature Ford\'s 2.3-litre EcoBoost inline four engine.',
+            'description'   => '<p>Ford says, the 2.3-litre EcoBoost engine in the Ford Mustang has been enhanced specifically for the Ford Mustang. The intake manifold and turbocharger housing has been improved to to increase the output
+            to better suite the Ford Mustang performance expectation while providing the also expected efficiency and economy from this 2.3-litre power unit.</p><p>As with other EcoBoost engines, direct fuel injection, twin independent variable 
+            camshaft timing and turbocharging are a few of the modern technologies used to help bring the driveability in any conditions in the smaller displacement unit.</p><p>To go with tweaked 2.3-liter performance some of the interals have been 
+            updated, these include:</p><ul>
+            <li>Forged-steel crankshaft</li>
+            <li>Piston-cooling jets</li>
+            <li>Steel piston ring carriers</li>
+            <li>Premium bearing materials</li>
+            <li>Upgraded valve seat materials</li>
+            <li>Forged-steel connecting rods</li>
+            <li>High-pressure die-cast aluminum cylinder block with ladder-frame bearing caps</li>
+            <li>Deep-sump, die-cast aluminum oil pan</li>
+            </ul><p>With the ability to overtake well thanks to the turbo technology and torque delivery the only thing not going for the 2.3-litre EcoBoost is the sound of the glorious <a href="'.route('article',['slug' => '2015-5.0-litre-v8']).'">5.0-litre V8</a>.</p>',
             'intro'         => 'The 2015 Ford Mustang will be the first to feature Ford\'s 2.3-litre EcoBoost inline four engine. Generating 305 horsepower and 300 lb.-ft of torgue, the performance
             isn\'t all that bad and comes with great efficiency in comparison to the <a href="'.route('article',['slug' => '2015-5.0-litre-v8']).'">5.0-litre V8</a>.',
             'date'          => '01 MAY',
@@ -156,6 +178,8 @@ class HomeController extends BaseController
         $boss = [
             'id'            => 3,
             'title'         => '2013 Mustang Boss 302',
+            'page_title'    => '2013 Ford Mustang Boss 302',
+            'meta_description' => '',
             'description'   => '',
             'intro'         => '',
             'date'          => '05 MAY',

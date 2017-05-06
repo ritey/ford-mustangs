@@ -4,6 +4,10 @@
 Ford Mustang Articles
 @endsection
 
+@section('metas')
+<meta name="description" value="Ford Mustang Articles">
+@endsection
+
 @section('body_class')
 homepage
 @endsection
@@ -12,7 +16,7 @@ homepage
 
     <section id="blog" class="container">
         <div class="center">
-            <h2>Mustang articles</h2>
+            <h2>Ford Mustang articles</h2>
             <p class="lead">A collection of useful information articles about the Ford Mustang</p>
         </div>
 

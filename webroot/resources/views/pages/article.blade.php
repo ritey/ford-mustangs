@@ -1,7 +1,11 @@
 @extends('layouts.master')
 
 @section('page_title')
-Ford Mustang Articles
+{{ $vars['article']['page_title'] or '' }}
+@endsection
+
+@section('metas')
+<meta name="description" value="{{ $vars['article']['meta_description'] or '' }}">
 @endsection
 
 @section('body_class')
@@ -12,7 +16,7 @@ homepage
 
     <section id="blog" class="container">
         <div class="center">
-            <h2>Mustang articles</h2>
+            <h2>Ford Mustang articles</h2>
             <p class="lead">{{ $vars['article']['title'] }}</p>
         </div>
 
