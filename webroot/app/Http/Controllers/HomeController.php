@@ -142,7 +142,7 @@ class HomeController extends BaseController
             This will improve air-fuel mixture and economy, idle stability and emissions.</p>
             <p>These changes should bring around 420 horsepower and 390 lb.-ft of torque, a similar rating to the 2013-2014 Ford Mustang GT.</p>
             ',
-            'intro'         => 'The Ford Mustang "Coyote" 2015 V8 has been tickled to give better performance by enabling better exhaust and intake performance at higher revs.',
+            'intro'         => '<p>The Ford Mustang "Coyote" 2015 V8 has been tickled to give better performance by enabling better exhaust and intake performance at higher revs.</p>',
             'date'          => '03 MAY',
             'author'        => 'David Wright',
             'img'           => '/images/articles/2015-ford-mustang-5-0-liter-v8-1.jpg',
@@ -167,8 +167,8 @@ class HomeController extends BaseController
             <li>High-pressure die-cast aluminum cylinder block with ladder-frame bearing caps</li>
             <li>Deep-sump, die-cast aluminum oil pan</li>
             </ul><p>With the ability to overtake well thanks to the turbo technology and torque delivery the only thing not going for the 2.3-litre EcoBoost is the sound of the glorious <a href="'.route('article',['slug' => '2015-5.0-litre-v8']).'">5.0-litre V8</a>.</p>',
-            'intro'         => 'The 2015 Ford Mustang will be the first to feature Ford\'s 2.3-litre EcoBoost inline four engine. Generating 305 horsepower and 300 lb.-ft of torgue, the performance
-            isn\'t all that bad and comes with great efficiency in comparison to the <a href="'.route('article',['slug' => '2015-5.0-litre-v8']).'">5.0-litre V8</a>.',
+            'intro'         => '<p>The 2015 Ford Mustang will be the first to feature Ford\'s 2.3-litre EcoBoost inline four engine. Generating 305 horsepower and 300 lb.-ft of torgue, the performance
+            isn\'t all that bad and comes with great efficiency in comparison to the <a href="'.route('article',['slug' => '2015-5.0-litre-v8']).'">5.0-litre V8</a>.</p>',
             'date'          => '01 MAY',
             'author'        => 'David Wright',
             'img'           => '/images/articles/2015-ford-mustang-2-3-liter-i4-ecoboost-1.jpg',
@@ -186,14 +186,37 @@ class HomeController extends BaseController
             <p>The interior, like other Mustangs though doesn\'t hold up against an M3 sadly. Plastics are still basic and even with the suede styled steering wheel and alloy accents the fact that you can\'t adjust the steering column and the pedals, unless you have huge feet, are too far apart.</p>
             <p>Overall, despite the lacking interior, with the upgraded engine, suspension and great progressive driving experience Ford have actually managed to make a modern day improvement on a classic which is unusual. The 2013 Ford Mustang Boss 302 lives up to the badge and with it\'s limited run 
             numbers is bound to be a great addition to any collection of American muscle.</p>',
-            'intro'         => 'The 2013 Ford Mustang Boss 302 sits nicely between the Mustang GT and the Shelby GT500 in terms of power sitting with 444bhp against 412bhp in the GT and 550bhp in the Shelby Mustang.',
+            'intro'         => '<p>The 2013 Ford Mustang Boss 302 sits nicely between the Mustang GT and the Shelby GT500 in terms of power sitting with 444bhp against 412bhp in the GT and 550bhp in the Shelby Mustang.</p>',
             'date'          => '05 MAY',
             'author'        => 'David Wright',
             'img'           => '/images/articles/2012-ford-mustang-boss-302-laguna-seca-photo-387581-s-986x603.jpg',
             'slug'          => '2013-mustang-boss-302',
             'link'          => route('article',['slug' => '2013-mustang-boss-302']),
         ];
-        $articles = collect([$v8,$ecoboost,$boss]);
+        $history = [
+            'id'            => 4,
+            'title'         => 'The history of the Ford Mustang',
+            'page_title'    => 'The history of the Ford Mustang',
+            'meta_description' => 'The Ford Mustang was first seen in 1962 as a 2 seater concept car and has since had 6 evolutions and is still currently on sale in 2017.',
+            'description'   => '<p>The Ford Mustang was first seen in 1962 as a 2 seater concept car and has since had 6 evolutions and is still currently on sale in 2017. In 1963 the 2nd generation concept car appeared as a four-seater to see how well it would fair in the market against the likes of the Plymouth Barracuda.</p>
+            The Ford Mustang was developed over an incredible 18 months and smashed early predicted sales estimates. It shared many components from existing Ford models like the Ford Falcon and Ford Fairlane.</p><p>As the years progressed changes naturally occured as the car market evoloved, sadly 
+            for the Mustang this meant bigger and heavier without matching performance improvements.</p>
+            <ul>
+                <li>1964.5 - 1973 MKI Ford Mustang - 1st generation Ford Mustang</li>
+                <li>1974 - 1978 MKII Ford Mustang - 2nd generation Ford Mustang</li>
+                <li>1979 - 1993 MKIII Ford Mustang - 3rd generation Ford Mustang</li>
+                <li>1994 - 2004 MKIV Ford Mustang - 4th generation Ford Mustang</li>
+                <li>2005 - 2014 MKV Ford Mustang - 5th generation Ford Mustang</li>
+                <li>2015 - Present MKVI Ford Mustang - 6th generation Ford Mustang</li>
+            </ul>',
+            'intro'         => '<p>The Ford Mustang was first seen in 1962 as a 2 seater concept car and has since had 6 evolutions and is still currently on sale in 2017. In 1963 the 2nd generation concept car appeared as a four-seater to see how well it would fair in the market against the likes of the Plymouth Barracuda.</p>',
+            'date'          => '10 MAY',
+            'author'        => 'David Wright',
+            'img'           => '/images/articles/ford-mustang-logo.jpg',
+            'slug'          => 'history-ford-mustang',
+            'link'          => route('article',['slug' => 'history-ford-mustang']),
+        ];
+        $articles = collect([$v8,$ecoboost,$boss,$history]);
         return $articles;
     }
 
