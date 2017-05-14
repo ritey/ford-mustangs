@@ -95,7 +95,7 @@ homepage
                             <i class="fa fa-car"></i>
                             <h2>{{ $item['title'] }}</h2>
                             <h3>{!! substr(strip_tags($item['intro']),0,48) !!}...</h3>
-							<a href="{{ $item['slug'] }}" class="btn btn-primary pull-right">Read more</a>
+							<a href="{{ $item['link'] }}" class="btn btn-primary pull-right">Read more</a>
                         </div>
                     </div><!--/.col-md-4-->
 
