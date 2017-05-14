@@ -130,6 +130,36 @@ class HomeController extends BaseController
         return $view;
     }
 
+    private function carDetails()
+    {
+        $ad1 = [
+            'id' => 1,
+            'title' => '1966 Ford Mustang Shelby GT350',
+            'page_title' => '1966 Ford Mustang Shelby GT350 For Sale - UK',
+            'meta_description' => '1966 Ford Mustang Shelby GT350 For Sale - UK',
+            'description' => '<p>A superbly presented 1966 Shelby GT350 which is currently set up for track use and road rallies. (Wimbledon White with Guardsman Blue stripes)</p>
+            <p>The car includes two motors, one very sharp Steve Warrior 289/4.7L FIA engine showing c.420 HP.</p>
+            <p>The other motor included being the original Hi-Po road engine with the very desirable and rare Paxton Supercharger option.</p>
+            <p>The car is fully prepared to FIA appendix K with all the right parts and with a current MSA issued HTP.</p>
+            <p>This GT350 is race prepared and ready to go but eminently road drivable with current MOT and full interior.</p>
+            <p>An incredibly usable GT350 which seems to be a Blue Chip Investment.</p>
+            <p>Contact BILL SHEPHERD MUSTANG - 01932 340888</p>',
+            'price' => '155,000',
+            'intro' => 'A superbly presented 1966 Shelby GT350 which is currently set up for track use and road rallies. (Wimbledon White with Guardsman Blue stripes)',
+            'state' => 'FOR SALE',
+            'img' => '/images/cars/1966-gt350-1.jpeg',
+            'images' => [
+                '/images/cars/1966-gt350-1.jpeg',
+                '/images/cars/1966-gt350-2.jpeg',
+                '/images/cars/1966-gt350-3.jpeg',
+            ],
+            'slug' => '1966-ford-mustang-shelby-gt350-uk',
+            'link' => route('sale',['slug' => '1966-ford-mustang-shelby-gt350-uk']),
+        ];
+        $cars = collect([$ad1]);
+        return $cars;
+    }
+
     private function articleDetails()
     {
         $v8 = [
@@ -306,6 +336,51 @@ class HomeController extends BaseController
             ];
 
             $view = view('pages.article',compact('vars'))->render();
+            $this->cache->add($key, $view, env('APP_CACHE_MINUTES',60));
+        }
+        return $view;
+    }
+
+    public function sales()
+    {
+        $key = $this->getKeyName(__function__);
+        if (env('CACHE_ENABLED',0) && $this->cache->has($key)) {
+            $view = $this->cache->get($key);
+        } else {
+            $cars = $this->carDetails();
+            $vars = [
+                'cars' => $cars->sortByDesc('id'),
+            ];
+            $view = view('pages.cars',compact('vars'))->render();
+            $this->cache->add($key, $view, env('APP_CACHE_MINUTES',60));
+        }
+        return $view;        
+    }
+
+    public function sale($slug = '')
+    {
+        if (empty($slug)) {
+            return redirect()->route('sales.index');
+        }
+
+        $car = '';
+        $cars = $this->carDetails();
+        $car = $cars->where('slug',$slug)->first();
+
+        if (empty($car)) {
+            return redirect()->route('sales.index');
+        }
+
+        $key = $this->getKeyName(__function__ . md5($slug));
+        if (env('CACHE_ENABLED',0) && $this->cache->has($key)) {
+            $view = $this->cache->get($key);
+        } else {
+
+            $vars = [
+                'car' => $car,
+            ];
+
+            $view = view('pages.car',compact('vars'))->render();
             $this->cache->add($key, $view, env('APP_CACHE_MINUTES',60));
         }
         return $view;
