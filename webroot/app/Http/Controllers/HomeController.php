@@ -224,7 +224,9 @@ class HomeController extends BaseController
             'description'   => '<p>These clubs are not affiliated with www.ford-mustangs.co.uk and if you have a club you would like listed here that isn\'t please get in touch.</p>
             <ul>
                 <li><a href="http://www.mocgb.net" target="_blank">Mustang Owners Club of Great Britain</a></li>
+                <li><a href="http://www.simplymustangs.co.uk" target="_blank">Simply Mustangs UK</a></li>
             </ul>
+            <p>The Mustang Owners club in the UK is the biggest Ford Mustang club with over 1400 members.</p>
             ',
             'intro'         => '<p>A collection of clubs in the UK for owners and fans of Ford Mustangs.</p>',
             'date'          => '14 MAY',
@@ -233,7 +235,46 @@ class HomeController extends BaseController
             'slug'          => 'uk-ford-mustang-clubs',
             'link'          => route('article',['slug' => 'uk-ford-mustang-clubs']),
         ];
-        $articles = collect([$v8,$ecoboost,$boss,$history,$clubs]);
+        $events17 = [
+            'id'            => 6,
+            'title'         => 'Ford Mustang Events around the UK',
+            'page_title'    => 'Ford Mustang Events around the UK',
+            'meta_description' => 'Ford Mustang meets occuring all around the UK, if you have an event that isn\'t listed please get in touch.',
+            'description'   => '
+            <p>A curated list of meetings and events around the UK for Ford Mustangs of any era. If you are organising or know of a Ford Mustang event that isn\'t listed 
+            please get in touch with the details of the event and we\'ll add it to the list of other Ford Mustang meets.</p>
+            <p><strong>May 2017</strong></p>
+            <p>20th May 2017 - Berkshire Ford Mustang meet at The Craven Arms Enborne nr Newbury</p>
+            <p>29th May 2017 - GT101 Open Day - Colchester</p>
+            <p><strong>June 2017</strong></p>
+            <p>4th June 2017 - Classic Ford Show at Santa Pod</p>
+            <p>10th June 2017 - Speedfest @ Brands Hatch</p>
+            <p><strong>July 2017</strong></p>
+            <p>1st July 2017 -  Tatton American Car Show Stars & Stripes at Tatton Park nr Knutsford</p>
+            <p>23rd July 2017 - Kents Kit Custom, and American car show at Aylesford Priory, Aylesford</p>
+            <p>29th July 2017 - Ace cafe All American Cruise Meets</p>
+            <p><strong>August 2017</strong></p>
+            <p>6th August 2017 - Silverstone Ford Fair</p>
+            <p>20th August 2017 - Annual Mustang Show at Rockingham Castle nr Corby</p>
+            <p><strong>September 2017</strong></p>
+            <p>3rd September 2017 - Brooklands American Day</p>
+            <p>17th September 2017 - Ford day Blackpool</p>
+            <p>30th September 2017 - Prescott American Autumn Classic at Prescott Hillclimb</p>
+            <p><strong>October 2017</strong></p>
+            <p>No Ford Mustang events yet in October</p>
+            <p><strong>November 2017</strong></p>
+            <p>No Ford Mustang events yet in November</p>
+            <p><strong>December 2017</strong></p>
+            <p>No Ford Mustang events yet in December</p>
+            ',
+            'intro'         => '<p>Ford Mustang events listing for 2017, find out what\'s happening and where around the UK with Ford Mustangs.</p>',
+            'date'          => '18 MAY',
+            'author'        => 'David Wright',
+            'img'           => '/images/articles/ford-mustang-logo.jpg',
+            'slug'          => 'uk-ford-mustang-events-2017',
+            'link'          => route('article',['slug' => 'uk-ford-mustang-events-2017']),
+        ];
+        $articles = collect([$v8,$ecoboost,$boss,$history,$clubs,$events17]);
         return $articles;
     }
 
