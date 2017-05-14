@@ -216,7 +216,24 @@ class HomeController extends BaseController
             'slug'          => 'history-ford-mustang',
             'link'          => route('article',['slug' => 'history-ford-mustang']),
         ];
-        $articles = collect([$v8,$ecoboost,$boss,$history]);
+        $clubs = [
+            'id'            => 5,
+            'title'         => 'Ford Mustang UK Clubs',
+            'page_title'    => 'Ford Mustang UK Clubs',
+            'meta_description' => 'UK Ford Mustang clubs. Active clubs with Ford Mustangs, Ford Mustang Meets and Ford Mustang Events in the UK',
+            'description'   => '<p>These clubs are not affiliated with www.ford-mustangs.co.uk and if you have a club you would like listed here that isn\'t please get in touch.</p>
+            <ul>
+                <li><a href="http://www.mocgb.net" target="_blank">Mustang Owners Club of Great Britain</a></li>
+            </ul>
+            ',
+            'intro'         => '<p>A collection of clubs in the UK for owners and fans of Ford Mustangs.</p>',
+            'date'          => '14 MAY',
+            'author'        => 'David Wright',
+            'img'           => '/images/articles/ford-mustang-logo.jpg',
+            'slug'          => 'uk-ford-mustang-clubs',
+            'link'          => route('article',['slug' => 'uk-ford-mustang-clubs']),
+        ];
+        $articles = collect([$v8,$ecoboost,$boss,$history,$clubs]);
         return $articles;
     }
 
