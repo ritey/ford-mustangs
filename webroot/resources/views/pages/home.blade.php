@@ -1,11 +1,15 @@
 @extends('layouts.master')
 
 @section('page_title')
-Ford Mustangs
+Ford Mustangs UK - The iconic Ford Mustang - Ford Mustangs in the UK - Pictures of Ford Mustangs
 @endsection
 
 @section('body_class')
 homepage
+@endsection
+
+@section('metas')
+<meta name="description" value="Ford Mustangs UK - The iconic Ford Mustang pictures and articles about all Ford Mustangs">
 @endsection
 
 @section('content')
