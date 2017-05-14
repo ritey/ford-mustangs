@@ -45,6 +45,10 @@ class HomeController extends BaseController
         if (env('CACHE_ENABLED',0) && $this->cache->has($key)) {
             $view = $this->cache->get($key);
         } else {
+            $articles = $this->articleDetails();
+            $vars = [
+                'articles' => $articles->sortByDesc('id')->take(6),
+            ];
             $view = view('pages.home',compact('vars'))->render();
             $this->cache->add($key, $view, env('APP_CACHE_MINUTES',60));
         }
@@ -130,7 +134,7 @@ class HomeController extends BaseController
     {
         $v8 = [
             'id'            => 2,
-            'title'         => '5.0-litre V8',
+            'title'         => 'Ford 5.0-litre V8 Engine',
             'page_title'    => 'Ford Mustang 5.0-litre V8 engine article',
             'meta_description' => 'The Ford Mustang 2015 5.0-litre V8 has been tickled to give better performance.',
             'description'   => '<p>The 2015 Ford Mustang V8 has been improved from lessons learnt developing the 
@@ -151,7 +155,7 @@ class HomeController extends BaseController
         ];
         $ecoboost = [
             'id'            => 1,
-            'title'         => '2.3-litre EcoBoost',
+            'title'         => 'Ford 2.3-litre EcoBoost Engine',
             'page_title'    => 'Ford Mustang 2.3-litre EcoBoost engine article',
             'meta_description' => 'The 2015 Ford Mustang will be the first to feature Ford\'s 2.3-litre EcoBoost inline four engine.',
             'description'   => '<p>Ford says, the 2.3-litre EcoBoost engine in the Ford Mustang has been enhanced specifically for the Ford Mustang. The intake manifold and turbocharger housing has been improved to to increase the output

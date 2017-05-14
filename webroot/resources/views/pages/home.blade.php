@@ -78,6 +78,36 @@ homepage
 	</div><!--/.carousel-->
 </section><!--/#main-slider-->
 
+    <section id="feature" >
+        <div class="container">
+           <div class="center wow fadeInDown">
+                <h2>Ford Mustang Articles</h2>
+                <p class="lead">A collection of information articles about the Ford Mustang including historical information, <br />Ford Mustang events and Ford Mustang clubs in the UK.</p>
+            </div>
+
+            <div class="row">
+                <div class="features">
+
+					@foreach($vars['articles'] as $item)
+
+                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-car"></i>
+                            <h2>{{ $item['title'] }}</h2>
+                            <h3>{!! substr(strip_tags($item['intro']),0,48) !!}...</h3>
+							<a href="{{ $item['slug'] }}" class="btn btn-primary pull-right">Read more</a>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+					@endforeach
+
+                </div><!--/.services-->
+
+				<p class="text-center"><a class="btn btn-primary" href="{{ route('article.index') }}">View all Ford Mustang articles</a></p>
+            </div><!--/.row-->    
+        </div><!--/.container-->
+    </section><!--/#feature-->
+
 @endsection
 
 @section('footer')
