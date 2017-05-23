@@ -156,7 +156,41 @@ class HomeController extends BaseController
             'slug' => '1966-ford-mustang-shelby-gt350-uk',
             'link' => route('sale',['slug' => '1966-ford-mustang-shelby-gt350-uk']),
         ];
-        $cars = collect([$ad1]);
+        $ad2 = [
+            'id' => 2,
+            'title' => '2015 Ford Mustang Shelby GT',
+            'page_title' => '2015 Ford Mustang Shelby GT For Sale - UK',
+            'meta_description' => '2015 Ford Mustang Shelby GT For Sale - UK @ Bill Shepherd Mustang',
+            'description' => '<p>A 2015 Ford Mustang Shelby GT with the full American Shelby GT upgrade pack installed including a supercharging and intake boost up to 670bhp.</p>
+            <p>This 2015 Ford Mustang Shelby GT also includes:</p>
+            <ul>
+                <li>Shelby/Wildwood big brake conversion</li>
+                <li>High performance springs/dampers</li>
+                <li>Upgrade rollbars</li>
+                <li>Shelby drive shafts</li>
+                <li>Shelby Venice forged Aluminium allows in black</li>
+                <li>Carbon aero body kit</li>
+                <li>Upgrade performance exhaust</li>
+                <li>Short shift</li>
+                <li>Shelby instruments</li>
+            </ul>
+            <p>As well as being stunning this Ford Mustang packs a huge performance punch and insane torque but still manages to be an awesome everyday drive.</p>
+            <p>Contact BILL SHEPHERD MUSTANG - 01932 340888</p>',
+            'price' => '79,950',
+            'intro' => 'A 2015 Ford Mustang GT with full American performance pack fitted this stunning easy to drive performance monster mustang is an ideal collectors car.',
+            'state' => 'FOR SALE',
+            'img' => '/images/cars/2015-ford-mustang-gt.jpeg',
+            'images' => [
+                '/images/cars/2015-ford-mustang-gt.jpeg',
+                '/images/cars/2015-ford-mustang-gt-2.jpeg',
+                '/images/cars/2015-ford-mustang-gt-3.jpeg',
+                '/images/cars/2015-ford-mustang-gt-4.jpeg',
+                '/images/cars/2015-ford-mustang-gt-5.jpeg',
+            ],
+            'slug' => '2015-ford-mustang-gt-uk',
+            'link' => route('sale',['slug' => '2015-ford-mustang-gt-uk']),
+        ];
+        $cars = collect([$ad1,$ad2]);
         return $cars;
     }
 
