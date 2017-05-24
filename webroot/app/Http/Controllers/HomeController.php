@@ -190,7 +190,39 @@ class HomeController extends BaseController
             'slug' => '2015-ford-mustang-gt-uk',
             'link' => route('sale',['slug' => '2015-ford-mustang-gt-uk']),
         ];
-        $cars = collect([$ad1,$ad2]);
+        $ad3 = [
+            'id' => 3,
+            'title' => '2015 Ford Mustang 5.0 GT Auto',
+            'page_title' => '2015 Ford Mustang 5.0 GT Auto For Sale - UK',
+            'meta_description' => '2015 Ford Mustang 5.0 GT Auto For Sale - UK @ Bill Shepherd Mustang',
+            'description' => '<p>A 2015 Ford Mustang GT 5.0 litre V8 ready to be bought and taken home today. This is a USA spec Ford Mustang in Deep Impact Blue, previously serviced at Bill Shepherd
+            Mustang and fitted with:</p>
+            <ul>
+                <li>Front running lights</li>
+                <li>Louvered bonnet</li>
+                <li>Rear spoiler</li>
+                <li>18" US spec alloys</li>
+                <li>Red rear lights</li>
+                <li>Ford performance exhaust</li>
+            </ul>
+            <p>This auto Ford Mustang also has a reversing camera, HiD headlights, electric seats, cruise control, line lock, premium sound system, SYNC bluetooth and ebony leather interior. 
+            As it\'s an American import it also benefits from cheaper car tax at just &pound;230 per year.</p>
+            <p>Contact BILL SHEPHERD MUSTANG - 01932 340888</p>',
+            'price' => '32,995',
+            'intro' => 'A 2015 Auto Ford Mustang GT in Deep Impact Blue with American alloys and rear lights, performance exhaust and the 435BHP 5.0 litre V8.',
+            'state' => 'FOR SALE',
+            'img' => '/images/cars/2015-ford-mustang-gt-blue.jpeg',
+            'images' => [
+                '/images/cars/2015-ford-mustang-gt-blue.jpeg',
+                '/images/cars/2015-ford-mustang-gt-blue-2.jpeg',
+                '/images/cars/2015-ford-mustang-gt-blue-3.jpeg',
+                '/images/cars/2015-ford-mustang-gt-blue-4.jpeg',
+                '/images/cars/2015-ford-mustang-gt-blue-5.jpeg',
+            ],
+            'slug' => '2015-ford-mustang-gt-blue-uk',
+            'link' => route('sale',['slug' => '2015-ford-mustang-gt-blue-uk']),
+        ];
+        $cars = collect([$ad1,$ad2,$ad3]);
         return $cars;
     }
 
