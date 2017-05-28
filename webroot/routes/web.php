@@ -21,3 +21,4 @@ Route::get('/mustangs-for-sale',['as' => 'sales.index', 'uses' => 'HomeControlle
 Route::get('/mustangs-for-sale/{slug}',['as' => 'sale', 'uses' => 'HomeController@sale']);
 Route::get('/contact',['as' => 'contact', 'uses' => 'HomeController@contact']);
 Route::post('/contact',['as' => 'contact.send', 'uses' => 'HomeController@contactSend']);
+Route::get('/sitemap.xml',['as' => 'sitemap', 'uses' => 'HomeController@sitemap']);

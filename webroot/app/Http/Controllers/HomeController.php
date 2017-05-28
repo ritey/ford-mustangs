@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App;
+use URL;
 use File;
 use Mail;
 use Illuminate\Http\Request;
@@ -482,5 +484,23 @@ class HomeController extends BaseController
             $this->cache->add($key, $view, env('APP_CACHE_MINUTES',60));
         }
         return $view;
+    }
+
+    public function sitemap()
+    {
+		$sitemap = App::make("sitemap");
+
+		$sitemap->setCache('laravel.sitemap', 3600);
+
+		if (!$sitemap->isCached()) {
+
+			$sitemap->add(URL::to('/'), '2017-05-01T12:00:00+02:00', '1.0', 'daily');
+			$sitemap->add(URL::route('sales.index'), '2017-05-20T12:00:00+02:00', '0.6', 'daily');
+			$sitemap->add(URL::route('article.index'), '2017-05-20T12:00:00+02:00', '0.6', 'daily');
+			$sitemap->add(URL::route('gallery'), '2017-05-01T12:00:00+02:00', '0.5', 'monthly');
+			$sitemap->add(URL::route('contact'), '2017-05-01T12:00:00+02:00', '0.2', 'yearly');
+		}
+    	// show your sitemap (options: 'xml' (default), 'html', 'txt', 'ror-rss', 'ror-rdf')
+    	return $sitemap->render('xml');        
     }
 }
