@@ -224,7 +224,41 @@ class HomeController extends BaseController
             'slug' => '2015-ford-mustang-gt-blue-uk',
             'link' => route('sale',['slug' => '2015-ford-mustang-gt-blue-uk']),
         ];
-        $cars = collect([$ad1,$ad2,$ad3]);
+        $ad4 = [
+            'id' => 4,
+            'title' => '2015 Ford Mustang 2.3 Ecoboost',
+            'page_title' => '2015 Black Ford Mustang 2.3 Ecoboost For Sale - UK',
+            'meta_description' => '2015 Black Ford Mustang 2.3 Ecoboost For Sale - UK @ Bill Shepherd Mustang',
+            'description' => '<p>A 2015 Shadow Black Ford Mustang 2.3 litre EcoBoost with only 7,200 miles and full service history.
+            Features include:</p>
+            <ul>
+                <li>Electric windows</li>
+                <li>Power seats</li>
+                <li>Push button start</li>
+                <li>19" Gloss Black Alloys</li>
+                <li>Rear view camera</li>
+                <li>Twin exahust</li>
+                <li>Red rear brake lights</li>
+                <li>Over carpets</li>
+            </ul>
+            <p>This Ford Mustang is one of the most econmical with the 2.3 litre Ford Ecoboost engines allowing for a motorway range of mid 30 miles per gallon.</p>
+            <p>Contact BILL SHEPHERD MUSTANG - 01932 340888</p>',
+            'price' => '24,999',
+            'intro' => 'A 2015 Shadow Black Ford Mustang with 1 previous owner, full service history and only 7,200 miles ready to drive away today.',
+            'state' => 'FOR SALE',
+            'img' => '/images/cars/2015-black-ecoboost.jpg',
+            'images' => [
+                '/images/cars/2015-black-ecoboost.jpg',
+                '/images/cars/2015-black-ecoboost-1.jpg',
+                '/images/cars/2015-black-ecoboost-2.jpg',
+                '/images/cars/2015-black-ecoboost-3.jpg',
+                '/images/cars/2015-black-ecoboost-4.jpg',
+                '/images/cars/2015-black-ecoboost-5.jpg',
+            ],
+            'slug' => '2015-black-ford-mustang-ecoboost-uk',
+            'link' => route('sale',['slug' => '2015-black-ford-mustang-ecoboost-uk']),
+        ];
+        $cars = collect([$ad1,$ad2,$ad3,$ad4]);
         return $cars;
     }
 
