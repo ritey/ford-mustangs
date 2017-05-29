@@ -410,7 +410,37 @@ class HomeController extends BaseController
             'slug'          => 'uk-ford-mustang-events-2017',
             'link'          => route('article',['slug' => 'uk-ford-mustang-events-2017']),
         ];
-        $articles = collect([$v8,$ecoboost,$boss,$history,$clubs,$events17]);
+        $shelby = [
+            'id'            => 7,
+            'title'         => 'Carroll Hall Shelby was born on 11th January 1923',
+            'page_title'    => 'Carroll Shelby race driver and tuner',
+            'meta_description' => 'Carroll Hall Shelby was born on 11th January 1923 and became a factory driver for Aston Martin',
+            'description'   => '
+            <p>Carroll Hall Shelby was born on 11th January 1923 and became a factory driver for Aston Martin and Maserati before going 
+            on to take part in 8 F1 races.</p>
+            <p>In 1959 Shelby was forced to retire from driving due to a heart condition he\'d had from childhood. He went on to continue to work
+            with cars by setting up the Shelby-American company and a high performance driving school.</p>
+            <p>The Shelby Cobra was the first performance car to be tested by Shelby and friend Dean Moon.</p>
+            <p>In 1962 Shelby show\'s the yellow Cobra at the New York Auto Show and goes on to produce more for Ford.</p>
+            <p>In 1964 Ford asked Shelby to develop a high-performance Mustang fastback.</p>
+            <p>The first 65 Shelby Mustang GT350 race and street cars were produced in September of 1965.</p>
+            <p>Hertz, in November 1965 awards the contract to build 200 GT350\'s called the GT350Hs. Specialised Ford Mustang race cars that were popular
+            enough to extend the contract to build 1000, 800 more than the intial agreement.</p>
+            <p>In June 1966 new 67 GT350 specs and a GT500 was announced which later were delivered to dealers from November.</p>
+            <p>Unfortunately in 1969 the Shelby Automotive Racing Company closed and Ford ended the long term racing agreement with Shelby.</p>
+            <p>At Ford\'s 100 Years of Racing Festival in 2003 and 45th anniversary for Shelby in 2010, Ford and Shelby reuninted with special edition cars.</p>
+            <p>Carroll Shelby sadly passed away at 89 in Dallas Texas. The heart issues experienced from the age of 7 finally caught up with him but his impact
+            on the motorsport and automotive world was easily seen with tributes pouring in from around the world.</p>
+            <p align="centre"><img src="/images/articles/shelby-hertz.jpg" width="100%" alt="Hertz GT350 Ford Mustangs"></p>
+            ',
+            'intro'         => '<p>Carroll Hall Shelby was born on 11th January 1923 and became a factory driver for Aston Martin and Maserati before going on to take part in 8 F1 races.</p>',
+            'date'          => '28 MAY',
+            'author'        => 'David Wright',
+            'img'           => '/images/articles/shelby-logo.jpg',
+            'slug'          => 'shelby-ford-mustang-history',
+            'link'          => route('article',['slug' => 'shelby-ford-mustang-history']),
+        ];
+        $articles = collect([$v8,$ecoboost,$boss,$history,$clubs,$events17,$shelby]);
         return $articles;
     }
 
