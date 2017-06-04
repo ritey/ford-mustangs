@@ -412,7 +412,7 @@ class HomeController extends BaseController
         ];
         $shelby = [
             'id'            => 7,
-            'title'         => 'Carroll Hall Shelby was born on 11th January 1923',
+            'title'         => 'Carroll Hall Shelby was born in 1923',
             'page_title'    => 'Carroll Shelby race driver and tuner',
             'meta_description' => 'Carroll Hall Shelby was born on 11th January 1923 and became a factory driver for Aston Martin',
             'description'   => '
@@ -440,7 +440,80 @@ class HomeController extends BaseController
             'slug'          => 'shelby-ford-mustang-history',
             'link'          => route('article',['slug' => 'shelby-ford-mustang-history']),
         ];
-        $articles = collect([$v8,$ecoboost,$boss,$history,$clubs,$events17,$shelby]);
+        $films = [
+            'id'            => 8,
+            'title'         => 'Ford Mustangs feature in many films',
+            'page_title'    => 'Ford Mustangs feature in many films',
+            'meta_description' => 'Ford Mustangs feature in many films, here is a list of the films that starred Ford Mustangs',
+            'description'   => '
+            <p>Ford Mustangs feature in many films, here is a list of the films that starred Ford Mustangs.</p>
+            <ul>
+                <li>Bullitt</li>
+                <li>Gone in 60 seconds</li>
+                <li>Need for speed</li>
+                <li>Dead Like Me: Life After Death</li>
+                <li>The Whistler</li>
+                <li>The Lovely Bones</li>
+                <li>Death Race</li>
+                <li>Never Back Down</li>
+                <li>Wanted</li>
+                <li>Redline</li>
+                <li>88 Minutes</li>
+                <li>Death sentence</li>
+                <li>Transformers</li>
+                <li>The Bucket List</li>
+                <li>I am legend</li>
+                <li>Hard Luck</li>
+                <li>The Lake House</li>
+                <li>Contact High</li>
+                <li>Machete</li>
+                <li>War of the worlds</li>
+                <li>Jackers</li>
+                <li>Street Kings 2: Motor City</li>
+                <li>Born to Race</li>
+                <li>Drive</li>
+                <li>Getaway</li>
+                <li>Fast and Furious: Tokyo Drift</li>
+                <li>Fast and Furious 6</li>
+                <li>Fast and Furious 8</li>
+            </ul>
+            ',
+            'intro'         => '<p>Ford Mustangs feature in many films, here is a list of the films that starred Ford Mustangs.</p>',
+            'date'          => '02 JUNE',
+            'author'        => 'David Wright',
+            'img'           => '/images/movies/getaway.jpg',
+            'slug'          => 'ford-mustangs-in-film',
+            'link'          => route('article',['slug' => 'ford-mustangs-in-film']),
+        ];
+        $rental = [
+            'id'            => 9,
+            'title'         => 'Ford Mustangs for hire in the UK',
+            'page_title'    => 'Ford Mustangs for hire in the UK',
+            'meta_description' => 'Ford Mustangs available to hire from Mustang Rental in Alton Hampshire. Hire a V8 5.0 litre GT Ford Mustang. Ford Mustang Rentals.',
+            'description'   => '
+            <p>Looking to hire a Ford Mustang? Ford Mustang Rental in the UK from www.mustangrental.co.uk. A 2016 White convertible 5.0 litre V8 
+            and Red 2016 5.0 litre V8 fastback is available to hire.</p>
+            <p>Based in Alton, Hampshire in the UK, Mustang Rental allows you to hire a 2016 Ford Mustang from David for a day, a weekend or a week or two.</p>
+            <p>Mustang Rental will let rent a Ford Mustang for:</p>
+            <ul>
+                <li>Weddings</li>
+                <li>Events</li>
+                <li>Photoshoots</li>
+                <li>Extended test drives</li>
+            </ul>
+            <p>A great opportunity to get up close and personal in a Ford Mustang. Experience the power of the V8, the sound and drive yourself and watch people\'s heads turn as
+            you cruise past in the rare in comparison to the German and other Ford variants on the roads around the UK.</p>
+            <p>Contact <a href="http://its.io/mustangrental" target="_blank">Mustang Rental</a> now to check availability of the Ford Mustangs.</p>
+            ',
+            'intro'         => '<p>Looking to hire a Ford Mustang? Ford Mustang Rental in the UK from www.mustangrental.co.uk. A White convertible 5.0 litre V8 
+            and Red 5.0 litre V8 fastback is available to hire.</p>',
+            'date'          => '04 JUNE',
+            'author'        => 'David Wright',
+            'img'           => '/images/2015/2015-ford-mustang-04.jpg',
+            'slug'          => 'ford-mustangs-for-hire-uk',
+            'link'          => route('article',['slug' => 'ford-mustangs-for-hire-uk']),
+        ];
+        $articles = collect([$v8,$ecoboost,$boss,$history,$clubs,$events17,$shelby,$films,$rental]);
         return $articles;
     }
 
