@@ -513,7 +513,26 @@ class HomeController extends BaseController
             'slug'          => 'ford-mustangs-for-hire-uk',
             'link'          => route('article',['slug' => 'ford-mustangs-for-hire-uk']),
         ];
-        $articles = collect([$v8,$ecoboost,$boss,$history,$clubs,$events17,$shelby,$films,$rental]);
+        $mustang18 = [
+            'id'            => 10,
+            'title'         => 'New 2018 Ford Mustang announced by Dwayne Johnson',
+            'page_title'    => 'New 2018 Ford Mustang announced by Dwayne Johnson',
+            'meta_description' => 'New 2018 Ford Mustang announced by Dwayne Johnson, agressive looks, refined improved engines and more equipment announced.',
+            'description'   => '
+            <p>The face-lifted 2018 Ford Mustang is arriving with a meaner stance with a revised front and rear which should help with aerodynamics.</p>
+            <p>Along with the tweaks on the outside, the inside now features the improved 12" digital cluster with tons of driver customisations available along with more driver assistance
+            such as Pre-Collision assistant and Pedestrian Detections system.</p>
+            <p>One new feature you won\'t necessarily see but might feel is the new MagneRide damper technology which will optimise the ride and improve handling when pushing on in the bends.
+            Another mechanical chance is in the transmission where both the auto and manual have revisions, a better clutch setup and new 10 speed auto box will be available.</p>
+            <p>You can expect to see the new 2018 Ford Mustang later this year.</p>',
+            'intro'         => '<p>New 2018 Ford Mustang announced by Dwayne Johnson, agressive looks, refined improved engines and more equipment announced.</p>',
+            'date'          => '10 JUNE',
+            'author'        => 'David Wright',
+            'img'           => '/images/2018/New-Ford-Mustang-V8-GT-with-Performace-Pack-in-Orange-Fury-1.jpg',
+            'slug'          => 'new-2018-ford-mustang',
+            'link'          => route('article',['slug' => 'new-2018-ford-mustang']),
+        ];
+        $articles = collect([$v8,$ecoboost,$boss,$history,$clubs,$events17,$shelby,$films,$rental,$mustang18]);
         return $articles;
     }
 
