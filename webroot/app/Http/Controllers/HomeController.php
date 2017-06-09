@@ -515,8 +515,8 @@ class HomeController extends BaseController
         ];
         $mustang18 = [
             'id'            => 10,
-            'title'         => 'New 2018 Ford Mustang announced by Dwayne Johnson',
-            'page_title'    => 'New 2018 Ford Mustang',
+            'title'         => 'New 2018 Ford Mustang',
+            'page_title'    => 'New 2018 Ford Mustang announced by Dwayne Johnson',
             'meta_description' => 'New 2018 Ford Mustang announced by Dwayne Johnson, agressive looks, refined improved engines and more equipment announced.',
             'description'   => '
             <p>The face-lifted 2018 Ford Mustang is arriving with a meaner stance with a revised front and rear which should help with aerodynamics.</p>
