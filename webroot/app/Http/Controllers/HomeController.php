@@ -63,7 +63,7 @@ class HomeController extends BaseController
         if (env('CACHE_ENABLED',0) && $this->cache->has($key)) {
             $view = $this->cache->get($key);
         } else {
-            $gt350 = $gt500 = $twenty_fifteen = $new = [];
+            $gt350 = $gt500 = $twenty_fifteen = $new = $twenty_eighteen = [];
             $gt350_files = File::allFiles(public_path() . '/images/gt350');
             foreach($gt350_files as $item) {
                 $gt350[] = ['file' => '/images/gt350/'.$item->getFilename(), 'tag' => 'GT350'];
@@ -80,17 +80,23 @@ class HomeController extends BaseController
             foreach($twenty_fifteen_files as $item) {
                 $twenty_fifteen[] = ['file' => '/images/2015/'.$item->getFilename(), 'tag' => '2015'];
             }
+            $twenty_eighteen_files = File::allFiles(public_path() . '/images/2018');
+            foreach($twenty_eighteen_files as $item) {
+                $twenty_eighteen[] = ['file' => '/images/2018/'.$item->getFilename(), 'tag' => '2018'];
+            }
             $vars = [
                 'tags' => [
                     'GT350',
                     'GT500',
                     '1967',
+                    '2018',
                     '2017',
                     '2015',
                 ],
                 'pics' => [
                     'GT350' => $gt350,
                     'GT500' => $gt500,
+                    '2018'  => $twenty_eighteen,
                     '2017'  => $new,
                     '2015'  => $twenty_fifteen,
                 ],
@@ -640,6 +646,22 @@ class HomeController extends BaseController
             $this->cache->add($key, $view, env('APP_CACHE_MINUTES',60));
         }
         return $view;
+    }
+
+    public function robots()
+    {
+        $response = "User-agent: *\n";
+        $response .= "Disallow:";
+
+        if (config('app.env') != 'live') {
+
+            $response = "User-agent: *\n";
+            $response .= "Disallow: /";    
+
+        }
+
+        return response($response, 200)
+            ->header('Content-Type', 'text/plain');
     }
 
     public function sitemap()

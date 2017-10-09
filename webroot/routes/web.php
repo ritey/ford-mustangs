@@ -12,6 +12,7 @@
 */
 
 Route::get('/',['as' => 'home', 'uses' => 'HomeController@index']);
+Route::get('/robots.txt', 'HomeController@robots');
 Route::get('/mustang-gallery',['as' => 'gallery', 'uses' => 'HomeController@gallery']);
 Route::get('/mustang-gallery/{id}',['as' => 'gallery.item', 'uses' => 'HomeController@galleryItem']);
 Route::get('/blog',['as' => 'blog', 'uses' => 'BlogController@index']);
