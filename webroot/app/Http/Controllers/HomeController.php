@@ -302,7 +302,7 @@ class HomeController extends BaseController
             'slug' => '2017-magnetic-grey-shelby-ford-mustang-uk',
             'link' => route('sale',['slug' => '2017-magnetic-grey-shelby-ford-mustang-uk']),
         ];
-        $cars = collect([$ad1,$ad2,$ad3,$ad4]);
+        $cars = collect([$ad1,$ad2,$ad3,$ad4,$ad5]);
         return $cars;
     }
 
