@@ -264,6 +264,44 @@ class HomeController extends BaseController
             'slug' => '2015-black-ford-mustang-ecoboost-uk',
             'link' => route('sale',['slug' => '2015-black-ford-mustang-ecoboost-uk']),
         ];
+        $ad5 = [
+            'id' => 5,
+            'title' => '2017 Ford Mustang Shelby Supersnake',
+            'page_title' => '2017 Ford Mustang Shelby Supersnake For Sale - UK',
+            'meta_description' => '2017 Ford Mustang Shelby Supersnake For Sale - UK @ Bill Shepherd Mustang',
+            'description' => '<p>A 2017 Magnetic Grey Ford Mustang 5.0 litre GT fitted with offical Shelby SuperSnake package.
+            This SuperSnake demonstrator includes:</p>
+            <ul>
+                <li>Whipple Supercharger - 808bhp with 640 lbft of torque</li>
+                <li>Stage 2 cold air inlet</li>
+                <li>Uprated cooling system</li>
+                <li>Ford Performance for Shelby Borla exhaust system with oval tips</li>
+                <li>Completely revised Suspension Springs / Dampers / Anti-Roll Bars - Front and Rear</li>
+                <li>Willwood cross drilled and vented Brake calipers -6 pot front and 4 pot rear</li>
+                <li>20" lightweight Weld Deep Dish Alloys in satin black</li>
+                <li>Shelby motif  Under bonnet detail package</li>
+                <li>Carbon Fibre Bonnet, Front Splitter,  Rocker panels, Rear Deck Spoiler and Rear Diffuser</li>
+                <li>Shelby SuperSnake \'up and over\' stripes in Satin Black Shelby carbon Fibre Dash Pod</li>
+                <li>Shelby motif Interior Package</li>
+                <li>Entry to the official Shelby World Registry</li>
+            </ul>
+            <p>This Ford Mustang is .</p>
+            <p>Contact BILL SHEPHERD MUSTANG - 01932 340888</p>',
+            'price' => '107,000',
+            'intro' => 'A 2017 Magnetic Grey Ford Mustang SuperSnake demonstrator ready to drive away today.',
+            'state' => 'FOR SALE',
+            'img' => '/images/cars/2015-black-ecoboost.jpg',
+            'images' => [
+                '/images/cars/2017-shelby-badge.jpg',
+                '/images/cars/2017-shelby-bonnet.jpg',
+                '/images/cars/2017-shelby-engine.jpg',
+                '/images/cars/2017-shelby-front.jpg',
+                '/images/cars/2017-shelby-interior.jpg',
+                '/images/cars/2017-shelby-rear.jpg',
+            ],
+            'slug' => '2017-magnetic-grey-shelby-ford-mustang-uk',
+            'link' => route('sale',['slug' => '2017-magnetic-grey-shelby-ford-mustang-uk']),
+        ];
         $cars = collect([$ad1,$ad2,$ad3,$ad4]);
         return $cars;
     }
