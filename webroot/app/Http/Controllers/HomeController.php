@@ -290,7 +290,7 @@ class HomeController extends BaseController
             'price' => '107,000',
             'intro' => 'A 2017 Magnetic Grey Ford Mustang SuperSnake demonstrator ready to drive away today.',
             'state' => 'FOR SALE',
-            'img' => '/images/cars/2015-black-ecoboost.jpg',
+            'img' => '/images/cars/2017-shelby-front.jpg',
             'images' => [
                 '/images/cars/2017-shelby-badge.jpg',
                 '/images/cars/2017-shelby-bonnet.jpg',
