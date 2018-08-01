@@ -19,6 +19,6 @@
     "vue": "^2.1.10",
     "font-awesome": "^4.7.0",
     "masonry-layout": "4.2.*",
-    "isotope-layout":"3.0.*"
+    "isotope-layout": "3.0.*"
   }
 }
